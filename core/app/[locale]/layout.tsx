@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { PropsWithChildren } from 'react';
@@ -15,10 +15,10 @@ import { revalidate } from '~/client/revalidate-target';
 import { Notifications } from '../notifications';
 import { Providers } from '../providers';
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-montserrat',
 });
 
 const RootLayoutMetadataQuery = graphql(`
@@ -88,7 +88,7 @@ export default function RootLayout({ children, params: { locale } }: Props) {
   const messages = useMessages();
 
   return (
-    <html className={`${inter.variable} font-sans`} lang={locale}>
+    <html className={`${montserrat.variable} font-sans`} lang={locale}>
       <body className="flex h-screen min-w-[375px] flex-col">
         <Notifications />
         <NextIntlClientProvider locale={locale} messages={messages}>

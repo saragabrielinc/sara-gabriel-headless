@@ -11,9 +11,10 @@ const config = {
         transparent: 'transparent',
         current: 'currentColor',
         black: '#000000',
-        primary: '#053FB0',
+        primary: '#4e4e4e',
         secondary: '#3071EF',
         white: '#FFFFFF',
+        gold: '#d7bb84',
         error: {
           DEFAULT: '#AD0000',
           secondary: '#C62828',
@@ -32,7 +33,7 @@ const config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        sans: ['var(--font-montserrat)'],
       },
       borderColor: {
         DEFAULT: '#CFD8DC',
